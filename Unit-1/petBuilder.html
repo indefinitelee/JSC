@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script src="petBuilder.js" type="text/javascript" />
+  <title></title>
+  <link rel="stylesheet" href="">
+</head>
+<body>
+
+ <input type="text" name="name">
+
+ <input list="ears" name="ears">
+  <datalist id="ears">
+    <option value="Normal">
+    <option value="None">
+    <option value="Fold">
+  </datalist>
+  <input type="submit">
+
+  <input type="radio" name="tail"><br>
+  <input type="submit" value="Submit">
+
+  <input type="radio" name="tail" value=False> None<br>
+  <input type="radio" name="tail" value="True"> Yes<br>
+
+<button onclick="buildPet()">Submit</button>
+<!-- not sure if these can all be wrapped in a single form tag or if they need multiple \n
+tags and then something like multer to get all values? -->
+</body>
+</html>
