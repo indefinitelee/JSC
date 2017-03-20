@@ -8,9 +8,10 @@ var computerRunningTotal;
 
 function getPlayerMove(){
 	userChoice = prompt("Please choose either 'rock', 'paper', or 'scissors'.");
+  console.log(userChoice);
   return userChoice;
 };
-getPlayerMove(userChoice);
+getPlayerMove();
 
 var getComputerMove = function(){
   var randomNumber =  Math.random();
@@ -27,11 +28,12 @@ var getComputerMove = function(){
 getComputerMove();
 
 
-//already have computerChoice and userChoice so why create new params?
+/** why can't I pass userChoice and computerChoice as the params to compare
+ in the getWinner function **/
 var getWinner = function(playerMove, computerMove){
   if (playerMove === computerMove) {
-    // this var would shadow the global variable winner
-    var winner = 'tie';
+    // if this was var winner it would shadow the global variable winner
+    winner = 'tie';
   } else if (playerMove === 'rock' && computerMove === 'scissors' ||
     playerMove === 'paper' && computerMove === 'rock' ||
     playerMove === 'scissors' && computerChoice === 'paper'
@@ -42,6 +44,9 @@ var getWinner = function(playerMove, computerMove){
   }
   return winner;
 };
+
+/** oh wait is it because getWinner is actually called with the userChoice and
+computerChoice params in the playToFive function? **/
 
 
 // why function declaration instead of expression?
