@@ -1,0 +1,11 @@
+.boring { color:#444; }
+
+.fun { font-family:'Abril Fatface'; font-size:2em; color:#c8f5ee; letter-spacing:.05em; }
+
+body{ background-color:#dadada; color:#222222; font-family:sans-serif; }
+
+h1{ text-align:center; }
+
+h2{ font-style:italic; text-align:center; }
+
+p{ width:32em; line-height:1.4em; margin:40px auto; font-size: 14px; }
